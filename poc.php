@@ -1,9 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: philippe
- * Date: 4/17/16
- * Time: 10:28 AM
- */
+  $test1 = 2 + 2;
+  $test2 = "Test";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-phpinfo();
+  <div>
+    <?=$test2?>: <?=$test1?>
+  </div>
+
+</body>
+</html>

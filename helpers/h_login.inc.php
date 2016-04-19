@@ -1,5 +1,6 @@
 <?php
 	if(session_status() != 2) {session_start();}
+	require($_SERVER["DOCUMENT_ROOT"] . "/data/auth_conn.php");
 
 	if (!function_exists("jys_gotoPage")) {
 		function jys_gotoPage($pageName, $args = "") {
@@ -13,9 +14,8 @@
 
   if (!function_exists("jys_lookupUser")) {
 		function jys_lookupUser($ulogin) {
-			// Get connection to jys_auth database and store it in $conn_auth
-			include($_SERVER["DOCUMENT_ROOT"] . "/data/auth_conn.php");
-			
+			// Get connection to jys_auth database and store it in $conn_aut
+			$conn_auth = getAuthenticationConnection();
 			//Initialize return to false
 			$theValue = false;
 			/** @noinspection SqlResolve */
@@ -65,4 +65,3 @@
 			}
 		}
 	}
-?>
