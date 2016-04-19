@@ -1,7 +1,5 @@
 <?php
 # FileName="auth_conn.php"
-# Type="SQLSRV"
-# HTTP="true"
 
 if (!function_exists("getAuthenticationConnection")) {
   function getAuthenticationConnection() {
