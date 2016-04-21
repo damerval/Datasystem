@@ -1,0 +1,9 @@
+* { font-family: Tahoma, Verdana, sans-serif; font-size: 16px; margin: 0; padding: 0 }
+
+section {
+  width: 20rem; height: 10rem;
+  background-color: beige; border: 1px double cornflowerblue;
+  margin: 1rem;
+  padding: 5px;
+  display: none;
+}
