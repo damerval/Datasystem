@@ -5,10 +5,7 @@
   $widgets = array("widget1", "widget2", "widget3");
 
   $visible_flags = getVisibilityFlags($widgets, 812);
-  $visible_flags_count = $visible_flags['permissionsCount'];
-
   $js_visible_flags = json_encode($visible_flags['permissions']);
-  $js_widgets = json_encode($widgets);
 
   $test1 = 2 + 2;
   $test2 = "Test";
@@ -24,21 +21,21 @@
   <link rel="stylesheet" href="/css/poc.css" type="text/css"/>
   <script type="text/javascript" src="/js/jquery-1.11.1.min.js" language="JavaScript"></script>
 
-
   <script type="text/javascript">
 
     function setVisibleWidgets() {
-      var a_visible_flags = <?=$js_visible_flags?>;
+      var a_visible_flags = {};
+      a_visible_flags = <?=$js_visible_flags?>;
 
       for (var widget in a_visible_flags) {
-        if (a_visible_flags[widget] == "visible") {
+        if (a_visible_flags.hasOwnProperty(widget) && a_visible_flags[widget] == "visible") {
           $("#" + widget).show();
         } else {
           $("#" + widget).hide();
         }
       }
-
     }
+
 
     $(document).ready(function () {
       setVisibleWidgets();
