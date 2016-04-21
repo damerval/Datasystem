@@ -49,3 +49,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+js/jqwidgets/*
+js/jquery-1.11.1.min.js
