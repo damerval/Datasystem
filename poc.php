@@ -1,17 +1,12 @@
 <?php
 
   require_once($_SERVER["DOCUMENT_ROOT"] . "/data/permissions_dispatcher.php");
-
   $widgets = array("widget1", "widget2", "widget3");
+  $user_id = 812;
 
-  $visible_flags = getVisibilityFlags($widgets, 812);
+  $visible_flags = getVisibilityFlags($widgets, $user_id);
   $js_visible_flags = json_encode($visible_flags['permissions']);
 
-  $test1 = 2 + 2;
-  $test2 = "Test";
-
-
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +31,6 @@
       }
     }
 
-
     $(document).ready(function () {
       setVisibleWidgets();
     });
@@ -46,7 +40,7 @@
 <body>
 
   <div>
-    <?=$test2?>: <?=$test1?>
+    <?=$js_visible_flags?>
   </div>
 
   <section id="widget1">

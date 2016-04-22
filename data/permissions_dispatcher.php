@@ -10,9 +10,8 @@
  * @return array
  */
 function getVisibilityFlags($widgets, $user_number) {
-  $__temp = $user_number;
   $__visibilities = array("visible", "not visible", "visible");
   $__permissions = array_combine($widgets, $__visibilities);
-  $__return = array("permissions" => $__permissions, "permissionsCount" => count($__permissions), "temp" => $__temp);
+  $__return = array("permissions" => $__permissions, "permissionsCount" => count($__permissions), "temp" => $user_number);
   return $__return;
 }
