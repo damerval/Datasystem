@@ -13,4 +13,3 @@ if (!$conn) {
 $loggedInUserID=812;
 $firstStatus = 1;
 $lastStatus = 5;
-?>

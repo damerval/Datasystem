@@ -11,4 +11,3 @@ if (!$conn) {
 	echo print_r(sqlsrv_errors());
 }
 
-?>
