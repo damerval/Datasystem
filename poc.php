@@ -7,6 +7,10 @@
   $visible_flags = getVisibilityFlags($widgets, $user_id);
   $js_visible_flags = json_encode($visible_flags['permissions']);
 
+  $sample_contract = "sss, test1, test2, test3";
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

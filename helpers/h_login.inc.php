@@ -32,7 +32,7 @@
 				$row = sqlsrv_fetch_array($res, SQLSRV_FETCH_ASSOC);
 				if (isset($row)) {
 					$_SESSION['credentials']['fullname'] = $row['USER_FNAME'] . ' ' . $row['USER_LNAME'];
-					$_SESSION['credentials']['userid'] = $row['USER_NUMBER'];
+					$_SESSION['credentials']['user_id'] = $row['USER_NUMBER'];
 					$_SESSION['credentials']['sql_login'] = $row['SQL_LOGIN'];
 					$_SESSION['credentials']['isSupervisor'] = ($row['Supervisor'] == 'SS') ? true : false ;
 					$_SESSION['credentials']['isAdmin'] = ($row['Ctype'] == 'IT') ? true : false ;
